@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras Algorítmicas en la Práctica Docente</title>
+    <!-- Vinculación de la hoja de estilos externa CSS3 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="header-principal">
+        <div class="contenedor header-contenido">
+            <div>
+                <h1>Lógica y Algoritmos Docentes</h1>
+                <p>Estructuras fundamentales de programación aplicadas a la práctica educativa</p>
+            </div>
+            <div class="badge-offline">
+                Modo Offline
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal con las 3 Estructuras Algorítmicas -->
+    <main class="contenedor grid-tarjetas">
+
+        <!-- 1. ESTRUCTURA SECUENCIAL -->
+        <section class="tarjeta">
+            <div class="tarjeta-header">
+                <span class="numero-paso num-secuencial">01</span>
+                <h2>Estructura Secuencial</h2>
+            </div>
+            <p class="descripcion">
+                Ejecución lineal de instrucciones paso a paso. Útil para el cálculo del promedio final ponderado de un
+                estudiante.
+            </p>
+
+            <div class="demo-box">
+                <div class="campo">
+                    <label for="nota1">Nota Parcial 1 (0-100):</label>
+                    <input type="number" id="nota1" value="85" min="0" max="100">
+                </div>
+                <div class="campo">
+                    <label for="nota2">Nota Parcial 2 (0-100):</label>
+                    <input type="number" id="nota2" value="90" min="0" max="100">
+                </div>
+                <div class="campo">
+                    <label for="nota3">Nota Parcial 3 (0-100):</label>
+                    <input type="number" id="nota3" value="78" min="0" max="100">
+                </div>
+                <button type="button" onclick="calcularPromedio()" class="btn btn-secuencial">
+                    Calcular Promedio
+                </button>
+                <div id="resSecuencial" class="resultado res-neutral">
+                    Esperando datos...
+                </div>
+            </div>
+
+            <div class="codigo-resumen">
+                <code>// Secuencia: Leer -> Sumar -> Dividir</code>
+            </div>
+        </section>
+
+        <!-- 2. ESTRUCTURA CONDICIONAL -->
+        <section class="tarjeta">
+            <div class="tarjeta-header">
+                <span class="numero-paso num-condicional">02</span>
+                <h2>Estructura Condicional</h2>
+            </div>
+            <p class="descripcion">
+                Toma de decisiones basadas en condiciones (<code>if/else</code>). Útil para determinar la aprobación o
+                necesidad de refuerzo.
+            </p>
+
+            <div class="demo-box">
+                <div class="campo">
+                    <label for="notaEstudiante">Calificación Obtenida (0-100):</label>
+                    <input type="number" id="notaEstudiante" value="58" min="0" max="100">
+                </div>
+                <small class="pauta">* Mínimo aprobatorio: 60 puntos</small>
+                <button type="button" onclick="evaluarEstudiante()" class="btn btn-condicional">
+                    Evaluar Estado
+                </button>
+                <div id="resCondicional" class="resultado res-neutral">
+                    Esperando evaluación...
+                </div>
+            </div>
+
+            <div class="codigo-resumen">
+                <code>// Condición: if (nota >= 60) { ... }</code>
+            </div>
+        </section>
+
+        <!-- 3. ESTRUCTURA ITERATIVA -->
+        <section class="tarjeta">
+            <div class="tarjeta-header">
+                <span class="numero-paso num-iterativa">03</span>
+                <h2>Estructura Iterativa</h2>
+            </div>
+            <p class="descripcion">
+                Repetición controlada de un bloque de código (<code>bucle for</code>). Útil para generar listas masivas
+                de asistencia en el aula.
+            </p>
+
+            <div class="demo-box">
+                <div class="campo">
+                    <label for="numEstudiantes">Cantidad de Estudiantes:</label>
+                    <input type="number" id="numEstudiantes" value="5" min="1" max="10">
+                </div>
+                <button type="button" onclick="generarAsistencia()" class="btn btn-iterativa">
+                    Generar Lista de Grupo
+                </button>
+                <div id="resIterativa" class="resultado-lista">
+                    La lista generada aparecerá aquí...
+                </div>
+            </div>
+
+            <div class="codigo-resumen">
+                <code>// Repetición: for (let i = 1; i <= n; i++)</code>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer-principal">
+        <div class="contenedor">
+            <p>Recurso Educativo Abierto - Diseñado para la enseñanza práctica de lógica de programación en la docencia.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Vinculación del script externo JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
